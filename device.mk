@@ -37,8 +37,10 @@ PRODUCT_COPY_FILES += \
     device/asus/grouper/init.grouper.rc:root/init.grouper.rc \
     device/asus/grouper/fstab.grouper:root/fstab.grouper \
     device/asus/grouper/ueventd.grouper.rc:root/ueventd.grouper.rc \
-    device/asus/grouper/init.grouper.usb.rc:root/init.grouper.usb.rc \
-    device/asus/grouper/gps.conf:system/etc/gps.conf
+    device/asus/grouper/init.grouper.usb.rc:root/init.grouper.usb.rc
+
+## The gps config appropriate for this device
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
 PRODUCT_COPY_FILES += \
